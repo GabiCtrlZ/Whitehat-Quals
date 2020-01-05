@@ -43,8 +43,8 @@ Let's take N=10 for example, there are 50 different triangles and if we look aga
 ```
 It can be represented as the sum of `n**2` series up to 16 plus the `n(n+1)` series up to 12, so that's `k = 4` and `k = 3`.
 If we go up to 11 we will get `k = 4` and `k = 4`.
-So we can understand if we're dealing with an even N k would be `n/2 - 1` for the `n**2` series and `n/2 - 2` for the `n(n+1)` series.
-And if it's an odd N k would be `((n - 1) / 2) - 1`.
+So we can understand if we're dealing with an even N, k would be `n/2 - 1` for the `n**2` series and `n/2 - 2` for the `n(n+1)` series.
+And if it's an odd N, k would be `((n - 1) / 2) - 1` for both.
 
 Now with that information let's implement it all in code:
 ```python
@@ -62,5 +62,7 @@ def num_of_triangles(num):
         n = ((num - 1) / 2) - 1
         return n_plus_one_sum(n) + n_squared_sum(n)
 ```
+
+Full code can be found in solver.py
 
 ![alt text](https://raw.githubusercontent.com/GabiCtrlZ/Whitehat-Quals/master/pictures/solve.png)
