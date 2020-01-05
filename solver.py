@@ -1,4 +1,3 @@
-import time
 import netcat as nc
 import re
 
