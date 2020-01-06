@@ -16,14 +16,15 @@ First, let's write all the outputs (for now we're using brute-force) for n 4-14 
 Now let's see if we can find something in the output, so we'll writing them and let's write the differences also.
 
 ```
-  1,  2,  4,  6,   9,  12,  16,  20,  25,  30,   36      <---- Differences
+ +1, +2, +4, +6,  +9, +12, +16, +20, +25, +30,  +36      <---- Differences
 
 0,  1,  3,  7,  13,  22,  34,  50,  70,  95,  125,  161  <---- Outputs
 ```
 You may already notice there are two series here `k**2` and `k(k+1)`.
 ```
-1, 4, 9, 16, 25, 36
-2, 6, 12, 20, 30
+1, 4, 9, 16, 25, 36  <---- k**2
+
+2, 6, 12, 20, 30     <---- k(k+1)
 ```
 
 So, to know how much triangles there are for a given N we can sum up all the differences up till that N,
@@ -39,8 +40,9 @@ And we can view `k(k+1)` as `k**2 + k` so the sum of `k(k+1)` is
 Now all that's left is to know for each N what k are we solving for.
 Let's take N=10 for example, there are 50 different triangles and if we look again here
 ```
-  1,  2,  4,  6,   9,  12,  16,  20,  25,  30,   36
-0,  1,  3,  7,  13,  22,  34,  50,  70,  95,  125,  161
+ +1, +2, +4, +6,  +9, +12, +16, +20, +25, +30,  +36      <---- Differences
+
+0,  1,  3,  7,  13,  22,  34,  50,  70,  95,  125,  161  <---- Outputs
 ```
 It can be represented as the sum of `n**2` series up to 16 plus the `n(n+1)` series up to 12, so that's `k = 4` and `k = 3`.
 If we go up to 11 we will get `k = 4` and `k = 4`.
