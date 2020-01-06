@@ -16,8 +16,9 @@ First, let's write all the outputs (for now we're using brute-force) for n 4-14 
 Now let's see if we can find something in the output, so we'll writing them and let's write the differences also.
 
 ```
-  1,  2,  4,  6,   9,  12,  16,  20,  25,  30,   36
-0,  1,  3,  7,  13,  22,  34,  50,  70,  95,  125,  161
+  1,  2,  4,  6,   9,  12,  16,  20,  25,  30,   36      <---- Differences
+
+0,  1,  3,  7,  13,  22,  34,  50,  70,  95,  125,  161  <---- Outputs
 ```
 You may already notice there are two series here `k**2` and `k(k+1)`.
 ```
